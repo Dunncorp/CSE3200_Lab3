@@ -2,6 +2,7 @@ package com.example.recycleviewerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
@@ -16,5 +17,11 @@ class MainActivity : AppCompatActivity() {
         val llm = LinearLayoutManager(this)
         recyclerView.layoutManager = llm
         recyclerView.adapter = FlowerAdapter(flowerArray)
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                baseContext,
+                llm.orientation
+            )
+        )
     }
 }

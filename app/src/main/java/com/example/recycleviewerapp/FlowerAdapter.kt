@@ -3,6 +3,7 @@ package com.example.recycleviewerapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ class FlowerAdapter(val flowerArrayStrings: Array<String>) : RecyclerView.Adapte
             itemView.setOnClickListener(this)
         }
         val flowerView: TextView = itemView.findViewById(R.id.flower_text_view)
+        //val flowerImage: ImageView = itemView.findViewById(R.id.flower_image_view)
         fun bind(word: String) {
             flowerView.text = word
         }
